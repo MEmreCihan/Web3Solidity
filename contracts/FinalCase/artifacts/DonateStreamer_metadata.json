@@ -38,19 +38,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -162,11 +149,11 @@
 	},
 	"sources": {
 		"contracts/FinalCase/DonateStreamer.sol": {
-			"keccak256": "0x44bfea4d0454d09714c15ecd97813766bc9fc6e20ef8f96ca1d1959c4625175a",
+			"keccak256": "0x2e9f664a01c3c1b1b345b76f02a46dede701d2b320fd1062bf05af69e2093274",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9297d576a1f4bd4d67a2ede027d77dda3824519380a377399d2dd923ddd5379a",
-				"dweb:/ipfs/QmaTVkvtw3ZdwQJ1kszdmjTy72cetDqLRANUgNeCKUHfGG"
+				"bzz-raw://a40a3f082666a03525bc2d1b47a78ddcf895b22f1bf5df34232bb9fbc363e909",
+				"dweb:/ipfs/QmahvonuUwTfu17sdNnUcwYuHzsC9mHs8SuZqbftSPUXkA"
 			]
 		}
 	},

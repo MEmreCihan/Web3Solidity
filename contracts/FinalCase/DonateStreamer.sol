@@ -31,22 +31,21 @@ contract DonateStreamer {
         donation.streamer = _streamer;
         donation.amount = _amount;
 
+        require(balance>donation.amount, "Not enough balance");
         totalDonations += 1;
         return totalDonations -1;
     }
 
     function sendEtherToContract() payable external{
-        
-    }
-
-    function balanceOf() external view returns(uint256){
-        return address(this).balance;
+        require(msg.value >0, "You should specify amount");
+        balance += msg.value;
     }
 
     function donate(uint256 id) external {
         Donation storage donation = donations[id];
         require(msg.sender == donation.creator, "You have to create donation for send ether");
         donation.streamer.transfer(donation.amount);
+        balance -= donation.amount;
 
         emit Donate(id, donation.amount);
     }
