@@ -11,13 +11,13 @@ contract MySmartContract {
     }
 
     receive() payable external {
-        balance += msg.value
+        balance += msg.value;
     }
 
     function withdraw(uint amount, address payable receiver) public {
 
         require(owner==msg.sender, "Only owner can withdraw");
-        require(balance<=amount, "Not enough balance for the transaction")
+        require(balance<=amount, "Not enough balance for the transaction");
         receiver.transfer(amount);
         balance -= amount;
     }
