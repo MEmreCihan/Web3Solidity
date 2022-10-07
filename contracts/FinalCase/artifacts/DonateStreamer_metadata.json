@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -23,6 +28,19 @@
 				],
 				"name": "Donate",
 				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -149,11 +167,11 @@
 	},
 	"sources": {
 		"contracts/FinalCase/DonateStreamer.sol": {
-			"keccak256": "0x2e9f664a01c3c1b1b345b76f02a46dede701d2b320fd1062bf05af69e2093274",
+			"keccak256": "0x3cefb3d3d2a7ea450470bb8e410f9cb9b1ce77b83b0572e7039631f2b29937bf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a40a3f082666a03525bc2d1b47a78ddcf895b22f1bf5df34232bb9fbc363e909",
-				"dweb:/ipfs/QmahvonuUwTfu17sdNnUcwYuHzsC9mHs8SuZqbftSPUXkA"
+				"bzz-raw://dd1c44aa8e065ecaee4cfa92f88cc8c6f02e8ca068074872f8f50df3afec7214",
+				"dweb:/ipfs/QmSANQZfa8s3XeMN8Q7qvcoj7N18jqxw1hPWJXR5awSYXV"
 			]
 		}
 	},

@@ -5,6 +5,11 @@ pragma solidity ^0.8.7;
 contract DonateStreamer {
 
     uint256 public balance;
+    address public admin;
+
+    constructor() {
+        admin = msg.sender;
+    }
 
     //Bağış adında bir obje oluşturduk
     struct Donation {
@@ -19,7 +24,7 @@ contract DonateStreamer {
 
     event Donate(uint256 donationsId, uint256 amount); //index numarası ve miktarı parametre olan event oluşturduk
 
-    function createDonation(
+    function createDonation(    //bağışın miktarını ve yayıncının belirtilmesini sağlayan fonsiyon
         string memory _name,
         address payable _streamer,
         uint256 _amount
@@ -36,12 +41,12 @@ contract DonateStreamer {
         return totalDonations -1;
     }
 
-    function sendEtherToContract() payable external{
+    function sendEtherToContract() payable external{     //akıllı kontrağa ether transferi
         require(msg.value >0, "You should specify amount");
         balance += msg.value;
     }
 
-    function donate(uint256 id) external {
+    function donate(uint256 id) external {             //yayıncıya etherin aktarılması
         Donation storage donation = donations[id];
         require(msg.sender == donation.creator, "You have to create donation for send ether");
         donation.streamer.transfer(donation.amount);
