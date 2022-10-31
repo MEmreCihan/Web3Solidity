@@ -167,11 +167,11 @@
 	},
 	"sources": {
 		"contracts/FinalCase/DonateStreamer.sol": {
-			"keccak256": "0x3cefb3d3d2a7ea450470bb8e410f9cb9b1ce77b83b0572e7039631f2b29937bf",
+			"keccak256": "0x2f35102229950d7d89e02389de74efd4085b560ce1d5bcd0af255edee423820c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dd1c44aa8e065ecaee4cfa92f88cc8c6f02e8ca068074872f8f50df3afec7214",
-				"dweb:/ipfs/QmSANQZfa8s3XeMN8Q7qvcoj7N18jqxw1hPWJXR5awSYXV"
+				"bzz-raw://71c8b81ce532b6fb6d4d0010e5884663f1bcb10f425a56529ef91d22c4c7c1d3",
+				"dweb:/ipfs/QmYYctG2w4GMC3Kz9FNmmHMTVZ1y52fgPPNwvsswjxKAXt"
 			]
 		}
 	},

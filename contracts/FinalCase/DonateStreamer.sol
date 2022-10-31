@@ -24,6 +24,11 @@ contract DonateStreamer {
 
     event Donate(uint256 donationsId, uint256 amount); //index numarası ve miktarı parametre olan event oluşturduk
 
+    modifier sufficientBalance() {
+        msg.value>0;
+        _;
+    }
+
     function createDonation(    //bağışın miktarını ve yayıncının belirtilmesini sağlayan fonsiyon
         string memory _name,
         address payable _streamer,
@@ -41,8 +46,8 @@ contract DonateStreamer {
         return totalDonations -1;
     }
 
-    function sendEtherToContract() payable external{     //akıllı kontrağa ether transferi
-        require(msg.value >0, "You should specify amount");
+    function sendEtherToContract() payable sufficientBalance external{     //akıllı kontrağa ether transferi
+        // require(msg.value >0, "You should specify amount");       // require yerine modifier kullanarak ether gönderebilme koşulu oluşturduk
         balance += msg.value;
     }
 
